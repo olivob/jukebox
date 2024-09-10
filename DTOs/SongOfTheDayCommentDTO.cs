@@ -1,16 +1,16 @@
-namespace Jukebox.Models
+namespace Jukebox.DTO
 {
     public class SongOfTheDayComment
     {
-        public int Id {get; set;}
+        public int Id { get; set; }
 
-        public int SongOfTheDayId {get; set;}
+        public int SongOfTheDayId { get; set; }
 
-        public int UserId {get; set;}
+        public int UserId { get; set; }
 
-        public string Comment {get; set;}
+        public string Comment { get; set; }
 
-        public DateTime CommentedAt {get; set;}
+        public DateTime CommentedAt { get; set; }
 
         public SongOfTheDayComment()
         {

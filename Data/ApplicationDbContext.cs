@@ -92,14 +92,14 @@ namespace Jukebox.Data
                 .WithMany(u => u.SongOfTheDayLikes)
                 .HasForeignKey(sdl => sdl.UserId);
 
-            // modelBuilder.Entity<SongOfTheDayComment>()
-            //     .HasOne(sdc => sdc.SongOfTheDay)
-            //     .WithMany(s => s.SongOfTheDayComments)
-            //     .HasForeignKey(sdc => sdc.SongOfTheDayId);
-            // modelBuilder.Entity<SongOfTheDayComment>()
-            //     .HasOne(sdc => sdc.User)
-            //     .WithMany(u => u.SongOfTheDayComments)
-            //     .HasForeignKey(sdc => sdc.UserId);
+            modelBuilder.Entity<SongOfTheDayComment>()
+                .HasOne(sdc => sdc.SongOfTheDay)
+                .WithMany(s => s.SongOfTheDayComments)
+                .HasForeignKey(sdc => sdc.SongOfTheDayId);
+            modelBuilder.Entity<SongOfTheDayComment>()
+                .HasOne(sdc => sdc.User)
+                .WithMany(u => u.SongOfTheDayComments)
+                .HasForeignKey(sdc => sdc.UserId);
 
             // Configure Shelf-Song relationship
             modelBuilder.Entity<ShelfSong>()

@@ -36,6 +36,17 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddAutoMapper(typeof(MappingProfile));
+
+    // using AutoMapper? 
+
+    services.AddScoped<IUserService, UserService>();
+    services.AddScoped<IUserRepository, UserRepository>(); 
+    
+}
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

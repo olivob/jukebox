@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jukebox")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+072dccf05beb4394ff715c4d68300f56065b016f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56ef3c67e20df5dd359007d69fe35c772c634c1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("jukebox")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jukebox")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

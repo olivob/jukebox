@@ -2,17 +2,17 @@ namespace Jukebox.Models
 {
     public class Shelf
     {
-        public int Id {get; set;}
+        public int Id { get; set; }
 
-        public int UserId {get; set;}
+        public int UserId { get; set; }
 
-        public string Name {get; set;}
+        public string Name { get; set; }
 
-        public string CoverImageUrl {get; set;}
+        public string CoverImageUrl { get; set; }
 
-        public DateTime CreatedAt {get; set;}
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt {get; set;}
+        public DateTime UpdatedAt { get; set; }
 
         public Shelf()
         {
@@ -26,5 +26,7 @@ namespace Jukebox.Models
                 CoverImageUrl = "";
             }
         }
+
+        public ICollection<ShelfSong> ShelfSongs { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 using Jukebox.DTO;
 
-namespace Jukebox.Services.User
+namespace Jukebox.Services.UserServices
 {
     public interface IUserService
     {

@@ -1,20 +1,20 @@
-namespace Jukebox.Models 
+namespace Jukebox.Models
 {
-    public class Album 
+    public class Album
     {
-        public int Id {get; set;}
+        public int Id { get; set; }
 
-        public string Title {get; set;}
+        public string Title { get; set; }
 
-        public string Artist {get; set;}
+        public string Artist { get; set; }
 
-        public string CoverArtUrl {get; set;}
+        public string CoverArtUrl { get; set; }
 
-        public DateTime ReleaseDate {get; set;}
+        public DateTime ReleaseDate { get; set; }
 
-        public DateTime CreatedAt {get; set;}
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt {get; set;}
+        public DateTime UpdatedAt { get; set; }
 
         public Album()
         {
@@ -33,5 +33,9 @@ namespace Jukebox.Models
                 CoverArtUrl = "";
             }
         }
+
+        public ICollection<UserAlbum> UserAlbums { get; set; }
+        public ICollection<UserProfileAlbum> UserFavoriteAlbums { get; set; }
+
     }
 }

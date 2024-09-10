@@ -1,3 +1,4 @@
+using Jukebox.Services.UserServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jukebox.Controllers
@@ -6,11 +7,11 @@ namespace Jukebox.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService; 
+        private readonly IUserService _userService;
 
         public UserController(IUserService userService)
         {
-            _userService = userservice;
+            _userService = userService;
         }
 
         // need to setup db context in repository and 

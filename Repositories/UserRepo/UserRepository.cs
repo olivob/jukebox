@@ -1,6 +1,6 @@
 using Jukebox.Models;
 
-namespace Jukebox.Repositories.User
+namespace Jukebox.Repositories.UserRepo
 {
     public class UserRepository : IUserRepository
     {

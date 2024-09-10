@@ -1,37 +1,33 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace Jukebox.Models
+namespace Jukebox.DTO
 {
-    public class User 
+    public class UserDTO 
     {
-        [Key]
         public int Id {get; set;}
 
-        [Required]
         public string Username {get; set;}
 
-        [Required]
-        [EmailAddress]
-        [MaxLength(255)]
         public string Email {get; set;}
-
-        [Required]
-        public string PasswordHash {get; set;}
 
         public string ProfilePicture {get; set;}
 
         public string Bio {get; set;}
 
-        [Required]
-        public DateTime CreatedAt {get; set;}
+        public DateTime CreatedAt{get; set;}
 
-        [Required]
         public DateTime UpdatedAt {get; set;}
 
-        // need to add attributes from other models pertaining to User 
-
-        public User()
+        public UserDTO()
         {
+            if (Username == null)
+            {
+                Username = "";
+            }
+
+            if (Email == null)
+            {
+                Email = "";
+            }
+
             if (ProfilePicture == null)
             {
                 ProfilePicture = "";

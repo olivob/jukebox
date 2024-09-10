@@ -8,9 +8,11 @@ namespace Jukebox.Controllers
     {
         private readonly IUserService _userService; 
 
-        public UserController(IUserService userservice)
+        public UserController(IUserService userService)
         {
             _userService = userservice;
         }
+
+        // need to setup db context in repository and 
     }
 }

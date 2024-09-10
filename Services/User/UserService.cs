@@ -12,9 +12,10 @@ namespace Jukebox.Services.User
             _userRepository = userRepository;
             _mapper = mapper;
         }
-        public Task<UserDTO> GetUserByIdAsync(int Id)
+        public async Task<UserDTO> GetUserByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            User user = await _userRepository.GetUserByIdAsync();
+            return _mapper.Map<UserDto>(user)
         }
     }
 }

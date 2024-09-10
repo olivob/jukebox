@@ -1,6 +1,6 @@
-namespace Jukebox.Models
+namespace Jukebox.DTO
 {
-    public SongOfTheDayLike
+    public class SongOfTheDayLikeDTO
     {
         public int Id {get; set;}
 

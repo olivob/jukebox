@@ -1,6 +1,6 @@
 namespace Jukebox.Models
 {
-    public SongOfTheDayLike
+    public class SongOfTheDayLike
     {
         public int Id {get; set;}
 

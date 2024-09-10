@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bryanolivo/Documents/jukebox/jukebox.csproj": {}
+    "/Users/bryanolivo/Documents/Jukebox/jukebox.csproj": {}
   },
   "projects": {
-    "/Users/bryanolivo/Documents/jukebox/jukebox.csproj": {
+    "/Users/bryanolivo/Documents/Jukebox/jukebox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bryanolivo/Documents/jukebox/jukebox.csproj",
+        "projectUniqueName": "/Users/bryanolivo/Documents/Jukebox/jukebox.csproj",
         "projectName": "jukebox",
-        "projectPath": "/Users/bryanolivo/Documents/jukebox/jukebox.csproj",
+        "projectPath": "/Users/bryanolivo/Documents/Jukebox/jukebox.csproj",
         "packagesPath": "/Users/bryanolivo/.nuget/packages/",
-        "outputPath": "/Users/bryanolivo/Documents/jukebox/obj/",
+        "outputPath": "/Users/bryanolivo/Documents/Jukebox/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bryanolivo/.nuget/NuGet/NuGet.Config"

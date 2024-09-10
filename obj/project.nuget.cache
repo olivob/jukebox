@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EFvaGKAkghs=",
+  "dgSpecHash": "MO60KI4khe4=",
   "success": true,
-  "projectFilePath": "/Users/bryanolivo/Documents/jukebox/jukebox.csproj",
+  "projectFilePath": "/Users/bryanolivo/Documents/Jukebox/jukebox.csproj",
   "expectedPackageFiles": [
     "/Users/bryanolivo/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/bryanolivo/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",

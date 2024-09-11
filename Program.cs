@@ -1,9 +1,23 @@
+using Jukebox.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddControllers();
+
+builder.Services.AddHttpClient<ISpotifyService, SpotifyService>(client =>
+{
+    client.BaseAddress = new Uri("https://api.spotify.com/");
+});
+
+builder.Services.AddScoped<ISpotifyService, SpotifyService>();
+builder.Services.AddScoped<ISpotifyTokenService, SpotifyTokenService>();
+
+// builder.Services.AddAutoMapper(typeof(MappingProfile)); //AutoMapper
 
 var app = builder.Build();
 
@@ -13,43 +27,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
+else
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddAutoMapper(typeof(MappingProfile));
-
-    // using AutoMapper? 
-
-    services.AddScoped<IUserService, UserService>();
-    services.AddScoped<IUserRepository, UserRepository>(); 
-    
+    app.UseHttpsRedirection();
 }
+
+// public void ConfigureServices(IServiceCollection services)
+// {
+//     services.AddAutoMapper(typeof(MappingProfile));
+
+//     // using AutoMapper? 
+
+//     services.AddScoped<IUserService, UserService>();
+//     services.AddScoped<IUserRepository, UserRepository>(); 
+
+// }
+
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

@@ -2,25 +2,25 @@ namespace Jukebox.DTO
 {
     public class AlbumDTO
     {
-        public int Id {get; set;}
+        public string Id { get; set; }
 
-        public string Title {get; set;}
+        public string Name { get; set; }
 
-        public string Artist {get; set;}
+        public string Artist { get; set; }
 
-        public string CoverArtUrl {get; set;}
+        public string CoverArtUrl { get; set; }
 
-        public DateTime ReleaseDate {get; set;}
+        public DateTime ReleaseDate { get; set; }
 
-        public DateTime CreatedAt {get; set;}
+        public DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt {get; set;}
+        public DateTime UpdatedAt { get; set; }
 
         public AlbumDTO()
         {
-            if (Title == null)
+            if (Name == null)
             {
-                Title = "";
+                Name = "";
             }
 
             if (Artist == null)
